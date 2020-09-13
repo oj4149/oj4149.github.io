@@ -1,7 +1,7 @@
 <?php
-    $themeClass = '';
+    $themeStyleSheet = 'css/light-mode.css';
     if (!empty($_COOKIE['theme']) && $_COOKIE['theme'] == 'dark') {
-        $themeClass = 'dark-theme';
+        $themeStyleSheet = 'css/dark-mode.css';
     }
 ?>
 
@@ -13,7 +13,7 @@
             dOgItY eAtS hEr TuRdS
         </title>
 
-        <link rel="stylesheet" type="text/css" href="css/light-mode.css" id="theme-link">
+        <link rel="stylesheet" type="text/css" href="<?php echo $themeStyleSheet; ?>" id="theme-link">
     </head>
     <body class="<?php echo $themeClass; ?>">
         <h1 align="center">
