@@ -1,3 +1,10 @@
+<?php
+    $themeClass = '';
+    if (!empty($_COOKIE['theme']) && $_COOKIE['theme'] == 'dark') {
+        $themeClass = 'dark-theme';
+    }
+?>
+
 <!DOCTYPE html>
 
 <html>
@@ -8,7 +15,7 @@
 
         <link rel="stylesheet" type="text/css" href="css/light-mode.css" id="theme-link">
     </head>
-    <body>
+    <body class="<?php echo $themeClass; ?>">
         <h1 align="center">
             Does Dogity eat her turds?
         </h1>
@@ -22,13 +29,19 @@
         <!--dark mode/light mode-->
         <script>
             const btn = document.querySelector(".btn-toggle");
-            const theme = document.querySelector("#theme-link");
             btn.addEventListener("click", function() {
-                if (theme.getAttribute("href") == "css/light-mode.css") {
-                    theme.href = "css/dark-mode.css";
-                } else {
-                    theme.href = "css/light-mode.css";
-                }
+            // Toggle the .dark-theme class on the body
+            document.body.classList.toggle("dark-theme");
+  
+            // Let's say the theme is equal to light
+            let theme = "light";
+            // If the body contains the .dark-theme class...
+            if (document.body.classList.contains("dark-theme")) {
+                // ...then let's make the theme dark
+                theme = "dark";
+            }
+            // Then save the choice in a cookie
+            document.cookie = "theme=" + theme;
             });
         </script>
 
