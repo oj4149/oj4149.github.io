@@ -6,7 +6,7 @@
             dOgItY eAtS hEr TuRdS
         </title>
 
-        <link rel="stylesheet" href="light-mode.css" id="theme-link">
+        <link rel="stylesheet" type="text/css" href="/css/light-mode.css" id="theme-link">
     </head>
     <body>
         <h1 align="center">
@@ -24,10 +24,10 @@
             const btn = document.querySelector(".btn-toggle");
             const theme = document.querySelector("#theme-link");
             btn.addEventListener("click", function() {
-                if (theme.getAttribute("href") == "light-mode.css") {
-                    theme.href = "dark-mode.css";
+                if (theme.getAttribute("href") == "/css/light-mode.css") {
+                    theme.href = "/css/dark-mode.css";
                 } else {
-                    theme.href = "light-mode.css";
+                    theme.href = "/css/light-mode.css";
                 }
             });
         </script>
