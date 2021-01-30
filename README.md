@@ -2,7 +2,6 @@
 
 Game credits!
   - 2048: https://github.com/gabrielecirulli/2048
-  - Couch 2048: https://github.com/mvasilkov/glitch2016
   - Flappy Bird: https://github.com/nebez/floppybird
   - Dino Game: https://github.com/wayou/t-rex-runner
   
