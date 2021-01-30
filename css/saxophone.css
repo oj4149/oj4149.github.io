@@ -7,8 +7,6 @@ ul {
 }
 
 ul a {
-    float: left;
-    padding: 10px;
     text-decoration: none;
     color: rgb(104, 136, 179);
 }
